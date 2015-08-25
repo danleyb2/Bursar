@@ -3,8 +3,8 @@
  * @author: ndieks
  * TODO:rename file to Students
  */
-require_once('Database.php');
-require_once('Transaction.php');
+require_once(__DIR__.'Database.php');
+
 
 class Student extends MysqlDatabase
 {

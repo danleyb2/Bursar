@@ -1,4 +1,6 @@
 <?php
+
+
 require_once '../config/config.php';
 include_once '../includes/Database.php';
 require_once '../includes/Session.php';

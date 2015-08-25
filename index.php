@@ -1,9 +1,12 @@
 <?php
-require_once 'error_reporting.php';
-require_once 'config/config.php';
-require_once 'includes/Session.php';
-require_once 'includes/school.php';
-require_once 'functions/functions.php';
+if (!defined(__ROOT__))define('__ROOT__', __DIR__);
+
+
+require_once __ROOT__.'/error_reporting.php';
+require_once __ROOT__.'/config/config.php';
+require_once __ROOT__.'/includes/Session.php';
+require_once __ROOT__.'/includes/school.php';
+require_once __ROOT__.'/functions/functions.php';
 
 
 $debug=0;

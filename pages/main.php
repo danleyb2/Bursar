@@ -1,8 +1,10 @@
 <?php
-require_once '../config/config.php';
-include_once '../includes/Database.php';
-require_once '../includes/Session.php';
-include_once '../includes/school.php';
+if (!defined(__ROOT__))define('__ROOT__', __DIR__);
+
+require_once __ROOT__.'/config/config.php';
+include_once __ROOT__.'/includes/Database.php';
+require_once __ROOT__.'/includes/Session.php';
+include_once __ROOT__.'/includes/school.php';
 
 $page='main';
 $debug=0;
