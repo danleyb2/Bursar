@@ -1,5 +1,5 @@
 <?php
-if (!defined(__ROOT__))define('__ROOT__', __DIR__);
+defined(__ROOT__)?null:define('__ROOT__', __DIR__);
 
 
 require_once __ROOT__.'/error_reporting.php';
