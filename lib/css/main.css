@@ -1,0 +1,28 @@
+
+
+.card-reveal-tr{
+	cursor:pointer;display:none;
+
+}
+
+btody{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  matin {
+    flex: 1 0 auto;
+  }
+
+
+.tr-pe{
+        position: relative;
+    height: 300px;
+    display: inline-block;
+}
+tr-p-a{
+
+    width: 100px;
+
+}

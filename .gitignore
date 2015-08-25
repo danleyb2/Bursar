@@ -9,15 +9,9 @@
 /assets/*
 
 #database connection
-/config/config.php
+#config/config.php
 
 
 #cdn css
-/lib/css/materialize.min.css
-/lib/css/main.css
-
-
-#cdn js
+#/lib/css/materialize.min.css
 /lib/js/cdn/*
-#cdn fonts
-/lib/font/*
