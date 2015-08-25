@@ -1,5 +1,5 @@
 <?php
-
+require_once('/../config/config.php');
 class Session
 {
 
@@ -23,7 +23,7 @@ class Session
     function open($save_path, $session_name){
         #global $database
         #connect to the db
-        $this->link=mysqli_connect('localhost','brian','brian123','bursar');
+        $this->link=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
         if ($this->link){
         return true;
         }
