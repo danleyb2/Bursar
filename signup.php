@@ -1,5 +1,5 @@
 <?php
-defined(__ROOT__)?null: dirname(dirname(__FILE__));
+#defined(__ROOT__)?null: dirname(dirname(__FILE__));
 
 require_once __ROOT__.'/config/config.php';
 require_once __ROOT__.'/includes/Session.php';

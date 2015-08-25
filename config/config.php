@@ -6,7 +6,7 @@
  * Time: 4:47 PM
  */
 
-defined(__ROOT__)?null:define('__ROOT__', dirname(__DIR__));
+#defined(__ROOT__)?null:define('__ROOT__', dirname(__DIR__));
 
 if (!defined('DB_HOST')){define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));}
 if (!defined('DB_PASSWORD')){define('DB_PASSWORD', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));}
