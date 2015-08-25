@@ -1,4 +1,4 @@
-<?php require_once '../includes/Student.php';?>
+<?php require_once '../includes/student.php';?>
 
 <?php
 /**

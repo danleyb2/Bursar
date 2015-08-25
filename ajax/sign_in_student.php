@@ -2,7 +2,7 @@
 require_once '../config/config.php';
 require_once '../includes/Database.php';
 require_once '../includes/Session.php';
-require_once '../includes/Student.php';
+require_once '../includes/student.php';
 
 $result_set=Student::st_check($_POST['student_name'],$_POST['student_pass']);
 if ($result_set){

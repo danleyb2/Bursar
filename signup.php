@@ -1,7 +1,7 @@
 <?php
 require_once 'config/config.php';
 require_once 'includes/Session.php';
-require_once 'includes/School.php';
+require_once 'includes/school.php';
 require_once 'functions/functions.php';
 
 $page = 'signup';
