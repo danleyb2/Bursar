@@ -10,17 +10,8 @@ $school_id=$_SESSION['school']['id'];
 ?>
 
 <?php
-/*
- * $q='select * from schools where id='.$_SESSION['school']['id'];
- */
-
-print_prep($_SESSION);
-print_br();
-print_prep($session);
-print_br();
 
 if ($session->is_looged_in()) {
-    print_br("Session is logged in");
 } else {
     header("Location:../index.php");
 }
@@ -33,7 +24,7 @@ if ($session->is_looged_in()) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Bursar</title>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <?php include '../setup/js.php';?>
     <?php require '../setup/css.php';?>
 </head>

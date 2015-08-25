@@ -15,7 +15,7 @@
 #cdn css
 /lib/css/materialize.min.css
 /lib/css/main.css
-/lib/css/font.css
+
 
 #cdn js
 /lib/js/cdn/*

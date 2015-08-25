@@ -30,7 +30,7 @@
 		</div>
 	</nav>
 	<!--END HEADER-->
-	<ul id="dropdown1" class="dropdown-content">
+	<ul id='dropdown1' class='dropdown-content'>
 		<li><a href="#!">Profile</a></li>
 		<li><a href="#!">Settings</a></li>
 		<li class="divider"></li>
