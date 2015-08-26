@@ -1,10 +1,15 @@
 <?php
-require_once '../config/config.php';
-include_once '../includes/Database.php';
-require_once '../includes/Session.php';
+if (!defined('__ROOT__')){
+    define('__ROOT__', dirname(__DIR__));
+}
 
-require_once '../includes/School.php';
-require_once '../functions/functions.php';
+
+
+require_once __ROOT__.'/config/config.php';
+include_once __ROOT__.'/includes/Database.php';
+require_once __ROOT__.'/includes/Session.php';
+require_once __ROOT__.'/includes/School.php';
+require_once __ROOT__.'/functions/functions.php';
 
 $page = 'students';
 $debug = 0;

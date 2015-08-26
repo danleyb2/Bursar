@@ -1,6 +1,6 @@
 <?php
 
-require_once('/../functions/functions.php');
+
 
 class MysqlDatabase{
 
