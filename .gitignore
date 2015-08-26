@@ -5,19 +5,5 @@
 /deployment.properties
 /deployment.xml
 
-#assets
-/assets/*
-
-#database connection
-/config/config.php
 
 
-#cdn css
-/lib/css/materialize.min.css
-/lib/css/main.css
-/lib/css/font.css
-
-#cdn js
-/lib/js/cdn/*
-#cdn fonts
-/lib/font/*
