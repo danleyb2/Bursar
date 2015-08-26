@@ -1,5 +1,5 @@
 <?php
-defined(__ROOT__)?null:define('__ROOT__', __DIR__);
+require_once 'config/init.php';
 
 
 require_once __ROOT__.'/error_reporting.php';
