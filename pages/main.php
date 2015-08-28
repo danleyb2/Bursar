@@ -1,10 +1,14 @@
 <?php
-#defined(__ROOT__)?null:define('__ROOT__', __DIR__);
+if (!defined('__ROOT__')){
+    define('__ROOT__', dirname(__DIR__));
+}
+
 
 require_once __ROOT__.'/config/config.php';
 include_once __ROOT__.'/includes/Database.php';
 require_once __ROOT__.'/includes/Session.php';
-include_once __ROOT__.'/includes/school.php';
+include_once __ROOT__.'/includes/School.php';
+require_once __ROOT__.'/functions/functions.php';
 
 $page='main';
 $debug=0;
@@ -12,8 +16,17 @@ $school_id=$_SESSION['school']['id'];
 ?>
 
 <?php
+/*
+ * $q='select * from schools where id='.$_SESSION['school']['id'];
+ */
+
+print_prep($_SESSION);
+print_br();
+print_prep($session);
+print_br();
 
 if ($session->is_looged_in()) {
+    print_br("Session is logged in");
 } else {
     header("Location:../index.php");
 }
@@ -26,7 +39,7 @@ if ($session->is_looged_in()) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Bursar</title>
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <?php include '../setup/js.php';?>
     <?php require '../setup/css.php';?>
 </head>

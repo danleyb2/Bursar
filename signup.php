@@ -1,10 +1,8 @@
 <?php
-#defined(__ROOT__)?null: dirname(dirname(__FILE__));
-
-require_once __ROOT__.'/config/config.php';
-require_once __ROOT__.'/includes/Session.php';
-require_once __ROOT__.'/includes/school.php';
-require_once __ROOT__.'/functions/functions.php';
+require_once 'config/config.php';
+require_once 'includes/Session.php';
+require_once 'includes/School.php';
+require_once 'functions/functions.php';
 
 $page = 'signup';
 
