@@ -1,6 +1,7 @@
 <?php
-require_once 'config/init.php';
-
+if (!defined('__ROOT__')){
+    define('__ROOT__', dirname(__FILE__));
+}
 
 require_once __ROOT__.'/error_reporting.php';
 require_once __ROOT__.'/config/config.php';

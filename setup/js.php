@@ -1,6 +1,6 @@
 <?php
 if(!isset($bsrc)){
-    $bsrc='../lib/js/';
+    $bsrc=__ROOT__.'/lib/js/';
 }
 ?>
 

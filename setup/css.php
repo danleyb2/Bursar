@@ -1,7 +1,7 @@
 
 <?php
 if(!isset($bhref)){
-$bhref='../lib/';
+$bhref=__ROOT__.'/lib/';
 }
 ?>
 
