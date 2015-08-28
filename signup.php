@@ -7,7 +7,7 @@ if (!defined('__ROOT__')){
 require_once __ROOT__.'/error_reporting.php';
 require_once __ROOT__.'/config/config.php';
 require_once __ROOT__.'/includes/Session.php';
-require_once __ROOT__.'/includes/School.php';
+require_once __ROOT__.'/includes/school.php';
 require_once __ROOT__.'/functions/functions.php';
 
 $page = 'signup';
@@ -42,23 +42,9 @@ if (isset($_POST['name'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Bursar</title>
 
-    <?php  $bsrc='lib/js/';  include 'setup/js.php';?>
-    <?php  $bhref='lib/';    require 'setup/css.php';?>
+    <?php  $bsrc=__ROOT__.'/lib/js/';  include 'setup/js.php';?>
+    <?php  $bhref=__ROOT__.'/lib/';    include 'setup/css.php';?>
 
-    <style type="text/css">
-
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
-
-    </style>
 
 </head>
 
@@ -70,7 +56,7 @@ $state = '<a href="index.php">Sign In</a>';
 include 'template/header_index.php';
 ?>
 <br>
-
+<main>
 	<div class="container">
 		<div class="row">
 		<p><?php if (isset($_SESSION['message'])){ echo "".$_SESSION['message']. ""; } ?>     </p>
@@ -119,6 +105,7 @@ include 'template/header_index.php';
 
 		</div>
 	</div>
+	</main>
 
 <?php include 'template/footer.php';?>
 </body>

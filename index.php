@@ -65,6 +65,8 @@ $state='<a href="signup.php">Sign Up</a>';
 include 'template/header_index.php';?>
 <br>
 
+<main>
+
 	<div class="container">
 
 
@@ -97,13 +99,11 @@ include 'template/header_index.php';?>
 
 
 
-							<button id="submit" class="btn waves-effect waves-light"
+							<button id="submit" class="btn waves-effect waves-light right"
     							type="submit" name="">Sign In
     							 <i class="material-icons right">send</i>
-    						</button>
-    						<button id="" class="btn waves-effect waves-light right"
-    							type="button" name=""><a href="signup.php"></a>Sign up<i class="material-icons right">add</i>
-    						</button>
+    						</button><br>
+    						<span id="" >Need an account? <a href="signup.php">Sign up</a></span>
 
 
 					</form>
@@ -124,5 +124,6 @@ include 'template/header_index.php';?>
 
 		</div>
 	</div>
+	</main>
 <?php include 'template/footer.php';?>
 </body>

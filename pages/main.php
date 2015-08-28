@@ -50,6 +50,7 @@ if ($session->is_looged_in()) {
 	<br>
 	<!--MAIN CONTENT-->
 
+	<main>
 	<div class="row">
 
 		<!--    -->
@@ -367,6 +368,7 @@ if ($session->is_looged_in()) {
 
 	</div>
 
+	</main>
 	<!--END MAIN CONTENT-->
 <?php include '../template/footer.php';?>
 </body>
