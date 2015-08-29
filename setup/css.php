@@ -75,19 +75,16 @@ if ($deployment) {?>
 <!--
 /*Override styles*/
 
-html{
-	min-height:100%;
-}
-body{
-	/* min-height: 100%; */
-    /* min-height: 100vh; */
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
 
-}
-footer{
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-}
+  main {
+    flex: 1 0 auto;
+  }
+
 nav, .footer-copyright{
 
     background-color: #485058 !important;

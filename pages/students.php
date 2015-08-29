@@ -26,7 +26,7 @@ $debug = 0;
 </head>
 <body>
 <?php include '../template/header_main.php';?>
-
+<main>
 <div class="container">
 
     <div class="collection with-header row">
@@ -217,11 +217,7 @@ if ($totaltpages > 1) {
 </div>
 
 	</div>
-
-
-
-
-
+</main>
 
 <?php include '../template/footer.php';?>
 </body>
