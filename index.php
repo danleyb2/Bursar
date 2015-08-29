@@ -34,6 +34,7 @@ if (isset($_POST['school_name']) && isset($_POST['sc_password'])) {
         redirect('pages/main.php');
     } else {
         $_SESSION['message'] = "Wrong school name password combination";
+        $forgot_pass=true;
     }
 } else {
     // redirect('index.php');
@@ -107,7 +108,9 @@ include 'template/header_index.php';?>
 
 
 					</form>
+					<?php if(isset($forgot_pass) && $forgot_pass){?>
 					<p><a href="forgot.php" class="right">Forgot password</a></p>
+					<?php }?>
 				</div>
 
 				<div class="col s6 right hide-on-small-and-down">

@@ -28,6 +28,7 @@ print_br();
 if ($session->is_looged_in()) {
     print_br("Session is logged in");
 } else {
+    $_SESSION['message']="Please login";
     header("Location:../index.php");
 }
 #die();
@@ -39,13 +40,13 @@ if ($session->is_looged_in()) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Bursar</title>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <?php include '../setup/js.php';?>
-    <?php require '../setup/css.php';?>
+
+    <?php include __ROOT__.'/setup/js.php';?>
+    <?php require __ROOT__.'/setup/css.php';?>
 </head>
 
 <body>
-<?php include '../template/header_main.php';?>
+<?php include __ROOT__.'/template/header_main.php';?>
 
 	<br>
 	<!--MAIN CONTENT-->
@@ -56,7 +57,7 @@ if ($session->is_looged_in()) {
 		<!--    -->
 		<!-- START PANE A   -->
 
-		<div class="col s3 hide-on-small-and-down">
+		<div class="col l3 hide-on-med-and-down">
 
 
 
@@ -118,6 +119,16 @@ if ($session->is_looged_in()) {
 			<div class="row">
 
 				<div class="col s12 m8">
+
+					<div class="col s12 hide-on-med-and-up">
+						<!-- start student details  -->
+						<div class="card-panel teal the-return">
+
+							<span>Login a Student for a transaction</span>
+						</div>
+						<!-- end student details  -->
+
+					</div>
 					<div class="col s12">
 
 
@@ -128,16 +139,16 @@ if ($session->is_looged_in()) {
 
 
 								<div class="row">
-									<div class="input-field col s4">
+									<div class="input-field col s12 l4">
 										<input id="c_name" type="text"> <label for="c_name">Student Username</label>
 									</div>
 
 
-									<div class="input-field col s4">
+									<div class="input-field col s12 l4">
 										<input id="c_pass" type="text" autocomplete="off"> <label
 											for="c_pass">Student Password</label>
 									</div>
-									<div class="input-field col s4">
+									<div class="input-field col s12 l4">
 
 
 												<button id="sign_in" class="btn waves-effect waves-light"
@@ -370,7 +381,7 @@ if ($session->is_looged_in()) {
 
 	</main>
 	<!--END MAIN CONTENT-->
-<?php include '../template/footer.php';?>
+<?php include __ROOT__.'/template/footer.php';?>
 </body>
 
 </html>
