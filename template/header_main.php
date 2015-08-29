@@ -38,9 +38,10 @@
 	</ul>
 
 	<ul class="side-nav" id="mobile-nav">
-		<li><a href="#">Link 1</a></li>
-		<li><a href="#">Link 2</a></li>
-		<li><a href="#">Link 3</a></li>
+		<li class="<?php echo ($page=='main')?'active':'';?>"><a href="main.php">Main</a></li>
+		<li class="<?php echo ($page=='students')?'active':'';?>"><a href="students.php">Students</a></li>
+		<li class="<?php echo ($page=='transactions')?'active':'';?>"><a href="transactions.php">Transactions</a></li>
+
 	</ul>
 
 </header>

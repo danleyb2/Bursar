@@ -4,11 +4,20 @@ if (!defined('__ROOT__')){
     define('__ROOT__', dirname(__DIR__));
 }
 
+
+
 require_once __ROOT__.'/config/config.php';
 include_once __ROOT__.'/includes/Database.php';
 require_once __ROOT__.'/includes/Session.php';
 require_once __ROOT__.'/includes/Transaction.php';
 require_once __ROOT__.'/functions/functions.php';
+
+if ($session->is_looged_in()) {
+
+} else {
+    $_SESSION['message']="Please login";
+    header("Location:../index.php");
+}
 
 $page='transactions';
 $debug=0;
@@ -23,12 +32,12 @@ $debug=0;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Bursar</title>
-    <?php include '../setup/js.php';?>
-    <?php require '../setup/css.php';?>
+    <?php include  __ROOT__.'/setup/js.php';?>
+    <?php require  __ROOT__.'/setup/css.php';?>
 </head>
 
 <body>
-<?php include '../template/header_main.php';?>
+<?php include  __ROOT__.'/template/header_main.php';?>
 <main>
 <div class="container">
 <div class="collection with-header row">
@@ -181,7 +190,7 @@ if ($totaltpages > 1) {
 </div>
 
 </main>
-<?php include '../template/footer.php';?>
+<?php include  __ROOT__.'/template/footer.php';?>
 </body>
 
 </html>

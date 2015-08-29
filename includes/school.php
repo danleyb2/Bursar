@@ -20,6 +20,19 @@ class School extends MysqlDatabase
         $result=mysqli_fetch_all($this->query_database($sql));
         return $result;
     }
+    public function validateData(){
+        //$sch=get_called_class();
+        #print_prep($this);
+        $sch=$this;
+
+        return (
+
+            $sch->username!=null &&
+            $sch->password!=null &&
+            $sch->name!=null &&
+            $sch->admin!=null &&
+            $sch->email!=null);
+    }
 
     public static  function all_students(){
         global $database;

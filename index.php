@@ -1,9 +1,13 @@
 <?php
-require_once 'error_reporting.php';
-require_once 'config/config.php';
-require_once 'includes/Session.php';
-require_once 'includes/School.php';
-require_once 'functions/functions.php';
+if (!defined('__ROOT__')){
+    define('__ROOT__', dirname(__FILE__));
+}
+
+require_once __ROOT__.'/error_reporting.php';
+require_once __ROOT__.'/config/config.php';
+require_once __ROOT__.'/includes/Session.php';
+require_once __ROOT__.'/includes/school.php';
+require_once __ROOT__.'/functions/functions.php';
 
 
 $debug=0;
@@ -30,6 +34,7 @@ if (isset($_POST['school_name']) && isset($_POST['sc_password'])) {
         redirect('pages/main.php');
     } else {
         $_SESSION['message'] = "Wrong school name password combination";
+        $forgot_pass=true;
     }
 } else {
     // redirect('index.php');
@@ -43,7 +48,7 @@ if (isset($_POST['school_name']) && isset($_POST['sc_password'])) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>School Bursar</title>
-<!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+
     <?php
     $bsrc='lib/js/';
     include 'setup/js.php';?>
@@ -60,6 +65,8 @@ $state='<a href="signup.php">Sign Up</a>';
 
 include 'template/header_index.php';?>
 <br>
+
+<main>
 
 	<div class="container">
 
@@ -93,17 +100,17 @@ include 'template/header_index.php';?>
 
 
 
-							<button id="submit" class="btn waves-effect waves-light"
+							<button id="submit" class="btn waves-effect waves-light right"
     							type="submit" name="">Sign In
     							 <i class="material-icons right">send</i>
-    						</button>
-    						<button id="" class="btn waves-effect waves-light right"
-    							type="button" name=""><a href="signup.php"></a>Sign up<i class="material-icons right">add</i>
-    						</button>
+    						</button><br>
+    						<span id="" >Need an account? <a href="signup.php">Sign up</a></span>
 
 
 					</form>
+					<?php if(isset($forgot_pass) && $forgot_pass){?>
 					<p><a href="forgot.php" class="right">Forgot password</a></p>
+					<?php }?>
 				</div>
 
 				<div class="col s6 right hide-on-small-and-down">
@@ -120,5 +127,6 @@ include 'template/header_index.php';?>
 
 		</div>
 	</div>
+	</main>
 <?php include 'template/footer.php';?>
 </body>

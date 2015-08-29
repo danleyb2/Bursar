@@ -22,9 +22,7 @@
 		<!--END HEADER-->
 
 		<ul class="side-nav" id="mobile-nav">
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
+			<li><?php echo $state;?></li>
 		</ul>
 
 	</header>
