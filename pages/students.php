@@ -64,7 +64,7 @@ $page = ($page < 1 ? 1 : $page);
 
 $offset = ($page - 1) * $per_page;
 
-$statement = "`students` ORDER BY `id` ASC"; // Change `records` according to your table name.
+$statement = "`students` ORDER BY `id` ASC";
 
 $results = mysqli_query($connection, "SELECT * FROM {$statement} LIMIT {$offset} , {$per_page}");
 

@@ -23,8 +23,6 @@ function validateEmail ($email){
     }else{
         return true;
     }
-
-
 }
 
 function logEvent($event){
